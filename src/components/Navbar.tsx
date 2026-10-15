@@ -2,11 +2,11 @@ import { useState } from 'react'
 import { ChevronDown, Menu, X, MessageSquareText, ShieldCheck } from 'lucide-react'
 
 const links: { label: string; href: string; dropdown?: boolean }[] = [
-  { label: 'Homepage', href: '#' },
-  { label: 'About', href: '#about' },
-  { label: 'Service', href: '#services', dropdown: true },
-  { label: 'Page', href: '#', dropdown: true },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Beranda', href: '#' },
+  { label: 'Tentang Kami', href: '#about' },
+  { label: 'Layanan', href: '#services' },
+  { label: 'Artikel', href: '#artikel' },
+  { label: 'Kontak', href: '#contact' },
 ]
 
 export default function Navbar() {
@@ -16,7 +16,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-40 bg-navy text-white">
       <div className="container-x flex h-14 items-center justify-between">
         <a href="#" className="flex items-center gap-1.5 text-lg font-extrabold">
-          <ShieldCheck size={20} /> BanyuwangiDev
+          <img src="/logo.png" alt="BanyuwangiDev" className="h-8 w-auto" />
         </a>
 
         <nav className="hidden items-center gap-7 text-[11px] font-semibold md:flex">
@@ -31,8 +31,8 @@ export default function Navbar() {
         <a href="#" className="hidden items-center gap-2 self-stretch bg-primary px-5 text-[10px] md:flex">
           <MessageSquareText size={20} />
           <span>
-            <span className="block font-bold">Have Any Query ?</span>
-            <span className="opacity-90">+123-234-456</span>
+              <span className="block font-bold">Punya Pertanyaan?</span>
+            <span className="opacity-90">+62 812-3456-7890</span>
           </span>
         </a>
 

@@ -6,11 +6,11 @@ import DotGrid from './ui/DotGrid'
 type Plan = { name: string; sub: string; price: string; cents: string; popular: boolean }
 
 const plans: Plan[] = [
-  { name: 'Education', sub: 'Cras viverra elit non odio', price: '39', cents: '99', popular: false },
-  { name: 'Life Protection', sub: 'Nunc vel odio ut velit', price: '79', cents: '99', popular: true },
-  { name: 'Car Insurance', sub: 'Aliquam elementum auctor', price: '59', cents: '99', popular: false },
+  { name: 'Paket Starter', sub: 'Untuk kebutuhan digital dasar', price: '5', cents: 'jt', popular: false },
+  { name: 'Paket Growth', sub: 'Untuk bisnis yang ingin berkembang', price: '10', cents: 'jt', popular: true },
+  { name: 'Paket Custom', sub: 'Sesuai kebutuhan proyek Anda', price: 'Konsul', cents: '', popular: false },
 ]
-const features = ['Fixed for entire policy term', 'De Will be transferred', 'Documents for verification']
+const features = ['Harga sesuai ruang lingkup proyek', 'Kode sumber diserahkan', 'Dokumentasi teknis tersedia']
 
 function PlanCard({ name, sub, price, cents, popular }: Plan) {
   return (
@@ -21,7 +21,7 @@ function PlanCard({ name, sub, price, cents, popular }: Plan) {
       </header>
       {popular && (
         <span className="absolute right-0 top-0 h-12 w-12 bg-primary-light [clip-path:polygon(0_0,100%_0,100%_100%)]">
-          <span className="absolute right-0.5 top-2 rotate-45 text-[7px] font-bold text-white">Popular</span>
+          <span className="absolute right-0.5 top-2 rotate-45 text-[7px] font-bold text-white">Terpopuler</span>
         </span>
       )}
 
@@ -31,7 +31,7 @@ function PlanCard({ name, sub, price, cents, popular }: Plan) {
           <span className="text-5xl font-extrabold leading-none">{price}</span>
           <span className="mt-1 flex flex-col text-left leading-none">
             <span className="text-sm font-bold">{cents}</span>
-            <span className="text-[7px] font-normal text-muted">Monthly</span>
+            <span className="text-[7px] font-normal text-muted">Per proyek</span>
           </span>
         </p>
 
@@ -44,9 +44,9 @@ function PlanCard({ name, sub, price, cents, popular }: Plan) {
         </ul>
 
         <a href="#" className={`mt-5 inline-flex rounded-full px-6 py-2.5 text-[9px] font-bold text-white ${popular ? 'bg-navy' : 'bg-primary'}`}>
-          Select The Plan
+          Pilih Paket
         </a>
-        <p className="mt-3 text-[7px] text-muted">Ed cursus massa non arcu</p>
+        <p className="mt-3 text-[7px] text-muted">Konsultasikan kebutuhan Anda</p>
       </div>
     </article>
   )
@@ -58,7 +58,7 @@ export default function Pricing() {
       <Wave className="absolute left-0 top-64 hidden h-24 w-10 md:block" />
       <DotGrid className="absolute right-0 top-0 hidden h-28 w-28 md:block" />
       <div className="container-x">
-        <SectionHeading center eyebrow="Our Best Plans" title="Life Can Be Limp, But We’ll Help You Take Shape." />
+        <SectionHeading center eyebrow="Paket Layanan" title="Wujudkan Ide Digital Anda Bersama Kami." />
         <div className="mt-10 grid gap-3 md:grid-cols-3">
           {plans.map((p) => (
             <PlanCard key={p.name} {...p} />

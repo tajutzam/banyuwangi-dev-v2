@@ -3,9 +3,9 @@ import DotGrid from './ui/DotGrid'
 import Wave from './ui/Wave'
 
 const posts = [
-  { title: 'Providing Education & A Bright Future Is Our Goal' },
-  { title: 'Ready For Tomorrow? Make Sense Of It With Credice Insurance' },
-  { title: 'Don’t Be That ‘One’ Who Made The Mistakes And Wasn’t Prepared' },
+  { title: 'Membangun Solusi Digital untuk Masa Depan yang Lebih Baik' },
+  { title: 'Siap Mengembangkan Bisnis di Era Digital?' },
+  { title: 'Hindari Kesalahan Digital dengan Perencanaan yang Tepat' },
 ]
 
 function PostCard({ title }: { title: string }) {
@@ -15,11 +15,11 @@ function PostCard({ title }: { title: string }) {
       <div className="p-4">
         <h3 className="text-[11px] font-bold leading-4 text-navy">{title}</h3>
         <p className="mt-2 text-[8px] leading-4 text-muted">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Aliquam condimentum.
+          Insight singkat seputar teknologi, produk digital, dan pengembangan bisnis.
         </p>
         <p className="mt-3 flex gap-4 border-t border-slate-100 pt-2 text-[7px] text-muted">
-          <span>May 31, 2022</span>
-          <span>No Comments</span>
+          <span>31 Mei 2026</span>
+          <span>Belum ada komentar</span>
         </p>
       </div>
     </article>
@@ -34,10 +34,10 @@ export default function Newsletter() {
       <div className="container-x">
         <div className="mb-6 flex items-end justify-between">
           <div>
-            <p className="eyebrow mb-1">Newsletter</p>
-            <h2 className="text-xl font-bold text-navy">Our Latest Newsletter</h2>
+            <p className="eyebrow mb-1">Artikel</p>
+            <h2 className="text-xl font-bold text-navy">Insight Terbaru Kami</h2>
           </div>
-          <a href="#" className="btn-navy !px-5 !py-2.5 text-[10px]">All Newsletter</a>
+          <a href="#" className="btn-navy !px-5 !py-2.5 text-[10px]">Lihat Semua Artikel</a>
         </div>
         <div className="grid gap-4 md:grid-cols-3">
           {posts.map((p) => (
